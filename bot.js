@@ -119,12 +119,12 @@ Bot.initEvents = function() {
 };
 
 Bot.login = function() {
-	this.bot.login(Files.data.settings.token);
+	this.bot.login(process.env.SECRET);
 };
 
 Bot.onReady = function() {
 	if(process.send) process.send('BotReady');
-	console.log('Bot is ready!');
+	console.log('Bot is ready HONDA!');
 	this.restoreVariables();
 	this.preformInitialization();
 };
